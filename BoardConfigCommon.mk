@@ -71,7 +71,6 @@ BOARD_RIL_CLASS := ../../../device/htc/s4-common/ril/
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-#BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
