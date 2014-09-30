@@ -1,19 +1,11 @@
+on early-init
+    setenforce permissive
+
 on boot
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/functions mass_storage,adb
-    write /sys/class/android_usb/android0/idVendor 0bb4
-    write /sys/class/android_usb/android0/idProduct 0ff9
-    write /sys/class/android_usb/android0/enable 1
-    start choice_fn
+    setprop usb.vendor 0bb4
+    setprop usb.product.adb 0ff9
+    setprop usb.product.mtpadb 0ca8
+    start chargeled
 
-service choice_fn /sbin/choice_fn
-    disabled
-
-service power_test /sbin/power_test
-    disabled
-
-service offmode_charging /sbin/offmode_charging
-    disabled
-
-service detect_key /sbin/detect_key
+service chargeled /sbin/chargeled
     disabled
