@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     lpm.rc \
+    chargeled \
     choice_fn \
     power_test \
     offmode_charging \
